@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>instavibe ~ the wisdom of your crowd on mobile devices with @instavibeapp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ask live questions to groups of any size at events, meetings, anywhere. Then watch group opinions unravel before your eyes.">
+    <script src="http://use.edgefonts.net/source-sans-pro.js"></script>
+    
+    <script>
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-43579841-2']);
+      _gaq.push(['_setDomainName', 'none']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+		body{
+			font-family: source-sans-pro, sans-serif;
+		}
+		.section{
+			padding: 40px 0px 70px 0px;
+			background: #fff;
+		}
+		.lined{background: #F0FEFF;
+		}
+		h1{
+			font-weight: 100;
+			font-size: 50px;
+			text-shadow: 0 1px 0 #000;
+			color: #fff;
+			padding-top: 0.7em;
+		}
+		.instavibe{
+			color: #34DBEC;
+		}
+		h2{
+			font-size: 39px;
+			line-height: 48px;
+			margin-bottom: 50px;
+		}
+		#more h3{
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+		.splash h2{
+			font-size: 2.8em;
+			font-weight: 400;
+			margin-bottom: 10px;
+			text-shadow: 0 1px 0 #000;
+			margin-top: 50px;
+		}
+		.splash .lead{
+			font-size: 22px;
+			color: #fff;
+			text-shadow: 0 1px 0 #000;
+		}
+		number{
+			background: #fff;
+			color: #34DBEC;
+			line-height: 60px;
+			height: 60px;
+			width: 60px;
+			border-radius: 30px;
+			display: inline-block;
+			font-size: 30px;
+			border: 1px solid #34DBEC;
+		}	
+		.col-md-4 p img{
+			height: 3em;
+		}
+		.icons{
+			margin-bottom: 20px;
+		}
+		.underline{
+			border-bottom: 1px dotted #555;
+		}
+		.btn-insta{
+			background: #34DBEC;
+			background-color: #34DBEC;
+		}
+		.splash{
+			 padding-top: 30px;
+			 color: #fff;
+			 text-align: center;
+		}
+		.background-splash{
+			background: url(img/audience.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+/*			-moz-transition:all 2s ease;
+			-webkit-transition:all 2s ease;
+			-ms-transition:all 2s ease;
+			-o-transition:all 2s ease;
+			transition:all 2s ease;
+			-webkit-filter:grayscale(1);*/
+		}
+		#more .lead, #team .lead, #contact .lead{
+			font-size: 24px;
+			color: #666;
+			font-weight: 100;
+		}
+		.background-splash.color {
+/*			-webkit-filter:grayscale(0.1);
+			-webkit-backface-visibility: hidden;
+			-webkit-transform: translateZ(0) scale(1.0, 1.0);*/
+		}
+		.slideshow { position:relative; }
+		.slideshow img { width: 67%;display: block;margin: 5px auto 0 auto; }
+		#works{
+			text-align: center;
+		}
+		#works p{
+			font-weight: 100;
+			margin-top: 10px;
+		}
+		#works img{
+			margin-top: 20px;
+		}
+		#works h3{
+			font-size: 20px;
+		}
+		.navbar{
+			margin-bottom: 0px;
+			font-size: 17px;
+			font-weight: 100;
+		}
+		.addthis_toolbox{
+			margin-top: 15px;
+		}
+		.navbar-default{
+			background-color: transparent;
+			border-bottom: none;
+		}
+		.nav-bar-scroll{
+			background: #fff;
+			border-bottom: 1px solid #34DBEC;
+		}
+		.navbar-default ul li a:hover{
+			color: #34DBEC;
+		}
+		.navbar-default ul li a{
+			color: #fff;
+		}
+		.nav-bar-scroll ul li a{
+			color: #666;
+		}
+		#faq h4{
+			cursor: pointer;
+		}
+		#faq p{
+			display: none;
+		}
+		small{
+			font-weight: 400;
+			opacity: 1;
+		}
+		@media (max-width: 1200px) {
+		  .splash {
+		    padding-bottom: 40px;
+		  }
+		}
+		@media (max-width: 600px) {
+		  .splash {
+		    padding-bottom: 40px;
+		  }
+		  .btn-insta{
+		  	margin-top: 20px;
+		  }
+		  #team .col-md-4{
+		  	margin-top: 30px;
+		  }
+		  p.icons{
+		  	margin-top: 0px;
+		  }
+		}
+	</style>
+	
+  </head>
+  <body>
+<nav class="navbar navbar-default navbar-fixed-top hidden-xs" role="navigation">
+    <div class="container">
+    	<!-- AddThis Button BEGIN -->
+    	<div class="addthis_toolbox addthis_default_style pull-left">
+    	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    	<a class="addthis_button_tweet"></a>
+    	<a class="addthis_button_linkedin_counter"></a>
+    	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    	</div>
+    	<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5219b4b32b6082a7"></script>
+    	<!-- AddThis Button END -->
+    	<ul class="nav navbar-nav pull-right">
+    	     <li><a href="about.html">About</a></li>
+    	     <li><a href="http://twitter.com/instavibeapp" target="_blank">@instavibeapp</a></li>
+    	</ul>
+  </div>
+</nav>
+
+  <div class="background-splash">
+	  <div class="container splash">
+	  	<div class="row-fluid">
+		<div class="col-md-5 hidden-xs" style="padding-top: 60px;">
+	  		<img src="img/hand.png" alt="" style="margin-top: 10px;width: 100%;"/>
+		</div>
+		<div class="col-md-7" style="padding-bottom: 0px;">
+			<h1 style="margin-top: 70px; margin-bottom: 45px;"><img src="img/instavibe-logo@2x.png" style="width: 70x; height: 70px;margin-right: 10px;" alt="" /> <span style="display: inline-block;margin-top: 10px;">instavibe</span></h1>
+			<h2>The wisdom of your crowd, instantly</h2>
+			<div class="lead">Ask live questions to groups of people using mobile devices</div>
+			<a href="http://instavi.be" class="btn btn-info btn-insta btn-lg"  style="margin-top: 30px;">Go to instavibe web app</a>
+		</div>
+	  </div>
+  </div>
+  <div class="section" id="more">
+  	<div class="container" style="padding-bottom: 70px;">
+		<div class="row-fluid" style="padding-top: 20px;">
+			<div class="col-md-4">
+				<p class="text-center icons">
+				<img alt="64x64" src="img/pie.png">
+				</p>
+				<h3 class="text-center">Capture wisdom, instantly</h3>
+				<p class="lead">Get people to vote on flows of questions within seconds: <span class="underline">Yes or No</span>, <span class="underline">ratings</span>, or <span class="underline">number input</span> on a keypad. Results appear instantly.</p>
+				<!-- to coordinate decision-making at work, to create interactivity between speaker & audience, to get student opinions to feed lectures, to interact with viewers in their homes, to organise on the spot voting in groups or communities, for man of the match elections -->
+			</div>
+			<div class="col-md-4">	
+				<p class="text-center icons">
+				<img alt="64x64" src="img/chat.png">
+				</p>
+				<h3 class="text-center">Crowds of any size</h3>
+				<p class="lead">Make decisions in <span class="underline">meetings</span>, find out what audiences think at <span class="underline">events</span>, create <span class="underline">on-the-spot democracies</span>, and much more. </p>
+			</div>
+			<div class="col-md-4">	
+				<p class="text-center icons">
+				<img alt="64x64" src="img/phone.png">
+				</p>
+				<h3 class="text-center">For the web & mobile era</h3>
+				<p class="lead">Zero setup, <span class="underline">no installs</span>, it's a web app. People just use their mobile devices to join vibes based on their <span class="underline">location</span> or by going to a URL.</p>
+			</div>
+		</div>
+		</div>
+		<div class="container" style="padding-bottom: 40px;">
+		
+		<div class="col-md-12 text-center">
+			<a href="http://instavi.be" class="btn btn-info btn-insta btn-lg">Go to instavibe web app</a>
+			<a href="about.html" class="btn btn-default btn-lg">Find out more</a>
+			
+		</div>
+	</div>
+ </div>
+  
+  </body>
+</html>
+
+
+<script>
+
+$(window).scroll(function() {    
+    // find the id with class 'active' and remove it
+    // get the amount the window has scrolled
+    var scroll = $(window).scrollTop();
+    // add the 'active' class to the correct id based on the scroll amount
+    if (scroll > 100) {
+    	$(".navbar").addClass("nav-bar-scroll");
+    }
+    
+    });
+
+$('#faq h4').click(function() {
+	$(this).next('p').toggle();
+});
+
+$('.background-splash').addClass('color');
+
+
+</script>
