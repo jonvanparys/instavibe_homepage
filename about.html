@@ -342,10 +342,10 @@
   			<div class="col-md-8">
   			<div id="posts">
   			</div>
-				<script src="http://instavibeapp.tumblr.com/api/read/json?num=5"></script>
+				<script src="http://instavibeapp.tumblr.com/api/read/json?num=3"></script>
 				<script>
 					$.each(tumblr_api_read.posts, function(index,value) {
-						clickable_title = "<div class='post'><h4>"+value['regular-title']+" <small>"+value.date.substring(0, 17)+"</small></h4><div>"+value['regular-body'].substring(0, 800)+"...</div><a href='"+value.url+"'>Read more</a></div>";
+						clickable_title = "<div class='post'><h4><a href='"+value.url+"'>"+value['regular-title']+"</a> <small>"+value.date.substring(0, 17)+"</small></h4><div>"+value['regular-body'].substring(0, 400)+"...</div><a href='"+value.url+"'>Read more</a></div>";
 						$('#posts').append(clickable_title);
 						console.log(clickable_title);
 					})
