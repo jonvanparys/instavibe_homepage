@@ -164,6 +164,9 @@
 		#news h4{
 			font-size: 28px;
 		}
+		#news .post{
+			margin-bottom: 40px;
+		}
 		#faq .col-md-4 p{
 			display: none;
 		}
@@ -342,14 +345,9 @@
 				<script src="http://instavibeapp.tumblr.com/api/read/json?num=5"></script>
 				<script>
 					$.each(tumblr_api_read.posts, function(index,value) {
-						console.log(value);
-						var body = value['regular-body'];
-						var title = value['regular-title'];
-						var date = value.date.substring(0, 17);
-						var url = value.url;
-						var body = body.substring(0, 800) + "..."
-						var clickable_title = "<h4>"+title+" <small>"+date+"</small></h4><p class='lead'>"+body+"</p><a href='"+url+"'>Read more</a>";
+						clickable_title = "<div class='post'><h4>"+value['regular-title']+" <small>"+value.date.substring(0, 17)+"</small></h4><div>"+value['regular-body'].substring(0, 800)+"...</div><a href='"+value.url+"'>Read more</a></div>";
 						$('#posts').append(clickable_title);
+						console.log(clickable_title);
 					})
 				</script>
   			</div>
