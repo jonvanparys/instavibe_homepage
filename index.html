@@ -186,25 +186,24 @@
 	
   </head>
   <body>
-<nav class="navbar navbar-default navbar-fixed-top hidden-xs" role="navigation">
-    <div class="container">
-    	<!-- AddThis Button BEGIN -->
-    	<div class="addthis_toolbox addthis_default_style pull-left">
-    	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-    	<a class="addthis_button_tweet"></a>
-    	<a class="addthis_button_linkedin_counter"></a>
-    	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-    	</div>
-    	<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5219b4b32b6082a7"></script>
-    	<!-- AddThis Button END -->
-    	<ul class="nav navbar-nav pull-right">
-    	     <li><a href="about.html">About</a></li>
-    	     <li><a href="http://twitter.com/instavibeapp" target="_blank">@instavibeapp</a></li>
-    	</ul>
-  </div>
-</nav>
-
   <div class="background-splash">
+	  <nav class="navbar navbar-default hidden-xs" role="navigation">
+	      <div class="container">
+	      	<!-- AddThis Button BEGIN -->
+	      	<div class="addthis_toolbox addthis_default_style pull-left">
+	      	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	      	<a class="addthis_button_tweet"></a>
+	      	<a class="addthis_button_linkedin_counter"></a>
+	      	<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	      	</div>
+	      	<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5219b4b32b6082a7"></script>
+	      	<!-- AddThis Button END -->
+	      	<ul class="nav navbar-nav pull-right">
+	      	     <li><a href="about.html">About</a></li>
+	      	     <li><a href="http://twitter.com/instavibeapp" target="_blank">@instavibeapp</a></li>
+	      	</ul>
+	    </div>
+	  </nav>
 	  <div class="container splash">
 	  	<div class="row-fluid">
 		<div class="col-md-5 hidden-xs" style="padding-top: 60px;">
@@ -260,17 +259,6 @@
 
 
 <script>
-
-$(window).scroll(function() {    
-    // find the id with class 'active' and remove it
-    // get the amount the window has scrolled
-    var scroll = $(window).scrollTop();
-    // add the 'active' class to the correct id based on the scroll amount
-    if (scroll > 100) {
-    	$(".navbar").addClass("nav-bar-scroll");
-    }
-    
-    });
 
 $('#faq h4').click(function() {
 	$(this).next('p').toggle();
