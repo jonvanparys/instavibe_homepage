@@ -330,7 +330,16 @@
   		<h2 class="text-center">News & Blog</h2>
   		<div class="row-fluid">
   			<div class="col-md-8">
-				<script src="http://instavibeapp.tumblr.com/js"></script>
+  			<ul id="posts">
+  			</ul>
+				<script src="http://instavibeapp.tumblr.com/api/read/json?num=5"></script>
+				<script>
+					$.each(tumblr_api_read.posts, function(index,value) {
+						console.log(value);
+						var clickable_title = "<li>"+value['regular-title']+"<br/><a href='"+value.url+"'>Read more</a></li>";
+						$('#posts').append(clickable_title);
+					})
+				</script>
   			</div>
 			<div class="col-md-4 text-center">
 				<a class="twitter-timeline" href="https://twitter.com/instavibeapp" data-widget-id="371204300652818432">Tweets by @instavibeapp</a>
