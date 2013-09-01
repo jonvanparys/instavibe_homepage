@@ -153,22 +153,21 @@
 			font-weight: 400;
 			opacity: 1;
 		}
-		@media (min-width: 600px) {
-			  .background-splash{
-			  	background: url(img/audience.jpg) no-repeat center center fixed; 
-			  	-webkit-background-size: cover;
-			  	-moz-background-size: cover;
-			  	-o-background-size: cover;
-			  	background-size: cover;
-			}
+		.scroll-more{
+			display: inline-block;position: absolute;color: #fff;bottom: 20px;left: 48%;background: #222;border-radius: 30px;padding: 10px;opacity: 0.8;box-shadow: 0px 1px 0px #000;
 		}
-		@media (max-width: 1200px) {
-		  .splash {
+		
+		/* media queries */
+		@media (max-width: 991px) {
+		  .background-splash {
+		  background: url(img/audience-mobile.jpg) no-repeat center center fixed; 
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
 		  }
-		}
-		@media (max-width: 600px) {
 		  .splash {
-		    padding-bottom: 40px;
+		    padding-bottom: 0px;
 		    padding-top: 0px;
 		  }
 		  .btn-insta{
@@ -180,20 +179,22 @@
 		  p.icons{
 		  	margin-top: 0px;
 		  }
-		  .background-splash{
-		  	background: url(img/audience-mobile.jpg) no-repeat center center fixed; 
-		  	-webkit-background-size: cover;
-		  	-moz-background-size: cover;
-		  	-o-background-size: cover;
-		  	background-size: cover;
 		}
+		@media (min-width: 992px) {
+		  .background-splash {
+		    background: url(img/audience.jpg) no-repeat center center fixed; 
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+		  }
 		}
 	</style>
 	
   </head>
   <body>
   <div class="background-splash" style="position: relative;">
-	  <nav class="navbar navbar-default hidden-xs" role="navigation">
+	  <nav class="navbar navbar-default hidden-xs hidden-sm" role="navigation">
 	      <div class="container">
 	      	<!-- AddThis Button BEGIN -->
 	      	<div class="addthis_toolbox addthis_default_style pull-left">
@@ -220,9 +221,12 @@
 			<p class="lead">Show of hands re-invented for the mobile era</p>
 			<a href="http://instavi.be" class="btn btn-info btn-insta btn-lg"  style="margin-top: 30px;">Go to instavibe web app</a>
 		</div>
+		<div class="col-md-5 visible-sm" style="padding-top: 50px;">
+				<img src="img/instavibe-screen.png" alt="" style="margin-top: 10px;"/>
+		</div>
 	  </div>
 	  </div>
-  	  <span class="hidden-xs" style="display: inline-block;position: absolute;color: #fff;bottom: 20px;left: 48%;background: #222;border-radius: 30px;padding: 10px;opacity: 0.8;box-shadow: 0px 1px 0px #000;">Scroll to learn more</span>
+  	  <span class="scroll-more visible-md visible-lg" >Scroll to learn more</span>
   </div>
   <div class="section lined" id="more">
   	<div class="container" style="padding-bottom: 70px;">
