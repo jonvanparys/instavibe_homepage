@@ -29,6 +29,10 @@
 		}
 		.lined{background: #F0FEFF;
 		}
+		p.team{
+			font-size: 17px;
+			margin-bottom: 30px;
+		}
 		h1{
 			font-weight: 100;
 			font-size: 50px;
@@ -170,18 +174,15 @@
 		    padding-bottom: 40px;
 		  }
 		}
-		@media (max-width: 600px) {
-		  .splash {
-		    padding-bottom: 40px;
-		  }
-		  .btn-insta{
-		  	margin-bottom: 20px;
+		@media (max-width: 768px) {
+		  #works .col-md-3 img{
+		  	margin-bottom: 30px;
 		  }
 		  #team .col-md-4{
 		  	margin-top: 30px;
 		  }
-		  p.icons{
-		  	margin-top: 60px;
+		  #team .contact-stuff{
+		  	margin-top: 40px;
 		  }
 		}
 	</style>
@@ -254,7 +255,7 @@
  <div class="section lined" id="faq">
   <div class="container">
 		<h2 class="text-center">Frequently asked questions</h2>
-		<p class="lead text-center">Click questions to show their answers. Feel free to get in touch if you have unanswered questions.</p>
+		<p class="lead text-center">Click a question to toggle answer. Feel free to <a href="#team">get in touch</a> if you have other questions.</p>
   	<div class="row-fluid">
 	  	<div class="col-md-4">
 			<h4>How does <span class="instavibe">instavibe</span> work?</h4>
@@ -293,38 +294,27 @@
 
   <div class="section" id="team">
   <div class="container text-center">
+  
   	<h2>Team & Contact</h2>
   		<p class="lead text-center" style="margin-bottom: 50px;">If you'd like to discuss <span class="instavibe">instavibe</span> or send in your feedback, please reach out to us.</p>
-  	
+  		
   	<div class="row-fluid text-left">
-  		<div class="col-md-4">
-  			<b>Jonathan</b> <a href="http://twitter.com/@jonvanparys">@jonvanparys</a> &middot; <span class="text-muted">design + some code</span><br />Jonathan led the web-team of the <a href="http://g1000.org">G1000</a>, the largest grassroots and crowd-funded deliberative democracy experiment ever organised in Europe. He is also CEO of data analytics startup <a href="http://additionly.com">Additionly</a>.
+  		<div class="col-md-8">
+  			<p class="team"><b>Jonathan</b> <a href="http://twitter.com/@jonvanparys">@jonvanparys</a> &middot; <span class="text-muted">design + code</span><br />Jonathan led the web-team of the <a href="http://g1000.org">G1000</a>, the largest grassroots and crowd-funded deliberative democracy experiment ever organised in Europe. He is also CEO of data analytics startup <a href="http://additionly.com">Additionly</a>.</p>
+  			<p class="team"><b>Olivier</b> <a href="http://twitter.com/@odemarne">@odemarne</a> &middot; <span class="text-muted">code + design</span><br />Olivier worked on verifiable online voting in a cryptography research group. He also contributed to the open source <a href="http://heliosvoting.org/">Helios Voting</a> project, and is CTO of data analytics startup <a href="http://additionly.com">Additionly</a>.</p>
+  			<p class="team"><b>Patrick</b> <a href="http://twitter.com/@patrickdemaret">@patrickdemaret</a> &middot; <span class="text-muted">marketing guy</span><br />Patrick has organised events with world-renowned speakers for the Big Data industry all around the globe, from Las Vegas to Singapore. He is also Marketing Programs Manager at <a href="http://sas.com">SAS Institute</a>.</p>
   		</div>
-  		<div class="col-md-4">
-  			<b>Olivier</b> <a href="http://twitter.com/@odemarne">@odemarne</a> &middot; <span class="text-muted">code + some design</span><br />Olivier worked on verifiable online voting in a cryptography research group. He also contributed to the open source <a href="http://heliosvoting.org/">Helios Voting</a> project, and is CTO of data analytics startup <a href="http://additionly.com">Additionly</a>.
+  		<div class="col-md-4 text-center contact-stuff">
+  				<h3>on Twitter</h3>
+  				<a href="http://twitter.com/instavibeapp" class="lead">@instavibeapp</a>
+  				<h3>by Email</h3>
+  				<a href="mailto:hello@instavibeapp.com" class="lead">hello@instavibeapp.com</a>
+  				<h3>by Phone</h3>
+  				<span class="lead">+32479772874</span>
+		</div>
   			
-  		</div>
-  		<div class="col-md-4">
-  			<b>Patrick</b> <a href="http://twitter.com/@patrickdemaret">@patrickdemaret</a> &middot; <span class="text-muted">the marketing guy</span><br />Patrick has organised events with world-renowned speakers for the Big Data industry all around the globe, from Las Vegas to Singapore. He is also Marketing Programs Manager at <a href="http://sas.com">SAS Institute</a>.
-  			
-  		</div>
   </div>
-	<div class="row-fluid" style="padding-top: 160px;">
-		<div class="col-md-4 text-center">
-			<h3>on Twitter</h3>
-			<a href="http://twitter.com/instavibeapp" class="lead">@instavibeapp</a>
-		</div>
-		<div class="col-md-4 text-center">
-			<h3>by Email</h3>
-			<a href="mailto:hello@instavibeapp.com" class="lead">hello@instavibeapp.com</a>
-		</div>
-		<div class="col-md-4 text-center">
-			<h3>by Phone</h3>
-			<span class="lead">+32479772874</span>
-		</div>
-		
-	</div>
-  	</div>
+  </div>
   </div>
   
   <div class="section lined" id="news">
