@@ -326,11 +326,22 @@
   			</div>
 				<script src="http://instavibeapp.tumblr.com/api/read/json?num=3"></script>
 				<script>
-					$.each(tumblr_api_read.posts, function(index,value) {
-						clickable_title = "<div class='post'><h4><a href='"+value.url+"'>"+value['regular-title']+"</a> <small>"+value.date.substring(0, 17)+"</small></h4><div>"+value['regular-body'].substring(0, 400)+"...</div><a href='"+value.url+"'>Read more</a></div>";
-						$('#posts').append(clickable_title);
-						console.log(clickable_title);
-					})
+					$(document).ready(function() {
+					  console.log(tumblr_api_read);
+					  $.each(tumblr_api_read.posts, function(index,value) {
+					  	if (value.type == 'quote') {
+							clickable_title = "<div class='post'><h4><a href='"+value.url+"'>Quote</a> <small>"+value.date.substring(0, 17)+"</small></h4><p class='lead'><i>"+value['quote-text']+"</i><p>"+value['quote-source']+"</div>";
+							$('#posts').append(clickable_title);
+						}
+						else if (value.type == 'regular') {
+							clickable_title = "<div class='post'><h4><a href='"+value.url+"'>"+value['regular-title']+"</a> <small>"+value.date.substring(0, 17)+"</small></h4><div>"+value['regular-body'].substring(0, 400)+"...</div><a href='"+value.url+"'>Read more</a></div>";
+							$('#posts').append(clickable_title);
+						}
+						else {
+	
+						}
+					  });
+					});
 				</script>
   			</div>
 			<div class="col-md-4 text-center">
